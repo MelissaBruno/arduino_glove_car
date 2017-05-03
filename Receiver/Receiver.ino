@@ -7,7 +7,7 @@ void setup() {
 
   control.SETUP();
   
-  vw_set_ptt_inverted(true);
+  //vw_set_ptt_inverted(true);
   vw_set_rx_pin(8);
   vw_setup(4000); // Bits per sec
   pinMode(7, OUTPUT);
@@ -25,10 +25,10 @@ void loop() {
         control.forward();
      }
      if(buf[0]=='1') {
-        control.backward();
+        control.release();
      }
      if(buf[0]=='2') {
-        control.release();
+        control.backward();
      }
      if(buf[0]=='3') {
         control.turnLeft();
