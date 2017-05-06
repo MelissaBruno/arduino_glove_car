@@ -19,9 +19,9 @@ void setup() {
   pinMode(TRIG_PIN, OUTPUT);
   pinMode(ECHO_PIN, INPUT);
   
-  vw_set_rx_pin(2);
-  vw_setup(4000);
-  vw_rx_start();
+  vw_set_rx_pin(2);         //Receiver pin
+  vw_setup(4000);           //Initialize library, bits/sec
+  vw_rx_start();            //Start monitoring of the reception of data
 }
 
 void loop() {
