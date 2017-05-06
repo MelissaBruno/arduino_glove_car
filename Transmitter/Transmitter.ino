@@ -24,23 +24,23 @@ void loop() {
     * flex sensors. vw_wait_tx() waits for the entire message to be sent.
     */
    if(flexval<40){
-     controller="0";
+     controller = "0";
      vw_send((uint8_t *)controller, strlen(controller));
      vw_wait_tx();
    }else if(flexval>70){
-     controller="2";
+     controller = "2";
      vw_send((uint8_t *)controller, strlen(controller));
      vw_wait_tx();
    }else if(turnval < 45){
-      controller="3";
+      controller = "3";
       vw_send((uint8_t *)controller, strlen(controller));
       vw_wait_tx(); 
    }else if(turnval > 58){
-      controller="4";
+      controller = "4";
       vw_send((uint8_t *)controller, strlen(controller));
       vw_wait_tx(); 
    }else{
-      controller="1";
+      controller = "1";
       vw_send((uint8_t *)controller, strlen(controller));
       vw_wait_tx(); 
    }
